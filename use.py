@@ -147,6 +147,11 @@ def get_tf_record(sentence):
 
 try:
     while True:
-        print(categories[np.argmax(model.predict([get_tf_record(input(">"))]))])
+        question = input("> ")
+        response = categories[np.argmax(model.predict([get_tf_record(question)]))]
+        if response == "carreras":
+            print("TIC, DD")
+        elif response == "tic":
+            print("Bienvenido a la mejor carrera")
 except Exception as e:
     print(e.args())
