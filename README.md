@@ -1,4 +1,3 @@
-python -m nltk.downloader spanish_grammars
 pip install nltk
-
-punkt
+python -m nltk.downloader spanish_grammars
+python -m nltk.downloader punkt
