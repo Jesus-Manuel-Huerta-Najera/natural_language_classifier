@@ -1,0 +1,20 @@
+{
+    "horarios": [
+        "Te comparto los horarios de la carrera"
+    ],
+    "pagos": [
+        "Te comparto los costos y fechas para realizar tus pagos"
+    ],
+    "plan_estudios": [
+        "Te comparto la lista de carreras que tenemos disponibles"
+    ],
+    "becas": [
+        "Te comparto la lista de becas, los documentos y la fechas para colicitarlas"
+    ],
+    "maestros": [
+        "Te comparto la plantilla docente con la que cuenta la Universidad"
+    ],
+    "talleres": [
+        "Te comparto la lista de talleres y los horarios en que se imparten"
+    ]
+}

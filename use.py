@@ -28,14 +28,21 @@ except Exception as e:
 
 try:
     # read the json file and load the training data
-    with open('data_es.json') as json_data:
+    with open('data_es2.json') as json_data:
         data = json.load(json_data)
-        print(data)
+except Exception as e:
+    print(e.args())
+
+try:
+    # read the json file and load the training data
+    with open('answers.json') as json_data:
+        data_answers = json.load(json_data)
 except Exception as e:
     print(e.args())
 
 # get a list of all categories to train for
 categories = list(data.keys())
+answers = list(data_answers.keys())
 words = []
 # a list of tuples with words in the sentence and category name
 docs = []
@@ -147,11 +154,10 @@ def get_tf_record(sentence):
 
 try:
     while True:
-        question = input("> ")
-        response = categories[np.argmax(model.predict([get_tf_record(question)]))]
-        if response == "carreras":
-            print("TIC, DD")
-        elif response == "tic":
-            print("Bienvenido a la mejor carrera")
+        question = input(">> ")
+        values = model.predict([get_tf_record(question)])
+        response = categories[np.argmax(values)]
+        result = data_answers[response]
+        print(result)
 except Exception as e:
     print(e.args())

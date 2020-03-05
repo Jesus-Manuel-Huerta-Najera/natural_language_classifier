@@ -24,7 +24,7 @@ stemmer = LancasterStemmer()
 data = None
 
 # read the json file and load the training data
-with open('data_es.json') as json_data:
+with open('data_es2.json') as json_data:
     data = json.load(json_data)
     print(data)
 
@@ -109,10 +109,6 @@ sent_2 = "que hacen en tic"
 sent_3 = "¿tienen algo de programacion?"
 sent_4 = "¿puedo estudiar con ustedes?"
 
-# sent_1 = "what time is it?"
-# sent_2 = "I gotta go now"
-# sent_3 = "do you know the time now?"
-# sent_4 = "you must be a couple of years older then her!"
 
 # a method that takes in a sentence and list of all words
 # and returns the data in a form the can be fed to tensorflow
